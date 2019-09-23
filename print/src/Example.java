@@ -1,12 +1,9 @@
 public class Example {
     public static void main(String[] args) {
-        int second = 1;
-        int minute = second*60;
-        int hour = minute*60;
-        int day = hour*24;
-        int year = day*365;
+        int first = 5;
+        int second = 4;
+        int sum = first + second;
 
-        System.out.println(year);
-
+        System.out.println(first + " + " + second + " = " + sum);
     }
 }
