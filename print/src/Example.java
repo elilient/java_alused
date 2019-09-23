@@ -1,9 +1,11 @@
+import java.util.Scanner;
+
 public class Example {
     public static void main(String[] args) {
-        int first = 5;
-        int second = 4;
-        int sum = first + second;
+        Scanner reader = new Scanner(System.in);
+        System.out.print("What is your name? ");
+        String name = reader.nextLine();
 
-        System.out.println(first + " + " + second + " = " + sum);
+        System.out.println("Hi," + name);
     }
 }
