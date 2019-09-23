@@ -1,9 +1,12 @@
 public class Example {
     public static void main(String[] args) {
-        int calcWithparens = (1 + 1) + 3 * (2 + 5);
-        int calcWithoutparens = 1 + 1 + 3 * 2 + 5;
+        int second = 1;
+        int minute = second*60;
+        int hour = minute*60;
+        int day = hour*24;
+        int year = day*365;
 
-        System.out.println(calcWithoutparens);
-        System.out.println(calcWithparens);
+        System.out.println(year);
+
     }
 }
