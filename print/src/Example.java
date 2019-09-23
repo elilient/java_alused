@@ -8,8 +8,8 @@ public class Example {
         System.out.print("Type another number: ");
         int second = Integer.parseInt(reader.nextLine());
         System.out.print("\n");
-        int sum = first + second;
+        double div = (double)first/(double)second;
 
-        System.out.print("Sum of the numbers: " + sum);
+        System.out.print("Division: " + first + " / " + second + " = " + div);
     }
 }
