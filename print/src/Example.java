@@ -1,21 +1,19 @@
 import java.util.Scanner;
 
 public class Example {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.print("Type your username: ");
-        String name = reader.nextLine();
+        System.out.print("Type a year: ");
+        int year = Integer.parseInt(reader.nextLine());
 
-        System.out.print("Type your password: ");
-        String pass = reader.nextLine();
-
-        if (name.equals("alex") && pass.equals("mightyducks")) {
-            System.out.println("You are now logged into the system!");
-        } else if (name.equals("emily") && pass.equals("cat")) {
-            System.out.println("You are now logged into the system!");
+        if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+            System.out.println("The year is a leap year.");
+        } else if (year % 4 == 0 && year % 100 != 0) {
+            System.out.println("The year is a leap year.");
         } else {
-            System.out.println("Your username or password was invalid!");
+            System.out.println("The year is not a leap year.");
         }
-
     }
+
+
 }
