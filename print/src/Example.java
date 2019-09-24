@@ -1,23 +1,16 @@
 import java.util.Scanner;
 
 public class Example {
-    public static void main(String[] args) {
-        while (true) {
-            Scanner reader = new Scanner(System.in);
-            System.out.print("Type the password: ");
-            String pass = reader.nextLine();
+    public static void main(String[] args) throws Exception {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("How old are you?");
+        int age = Integer.parseInt(reader.nextLine());
 
-            if (pass.equals("carrot")) {
-                System.out.println("Right!");
-                System.out.println("The secret is: jryy qbar!");
-                break;
-
-            } else {
-                System.out.println("Wrong!");
-            }
-
+        if (age > -1 && age < 121) {
+            System.out.println("OK");
+        } else {
+            System.out.println("Impossible!");
         }
+
     }
-
-
 }
