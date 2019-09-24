@@ -3,13 +3,18 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
-        System.out.print("How old are you?");
-        int age = Integer.parseInt(reader.nextLine());
+        System.out.print("Type your username: ");
+        String name = reader.nextLine();
 
-        if (age > -1 && age < 121) {
-            System.out.println("OK");
+        System.out.print("Type your password: ");
+        String pass = reader.nextLine();
+
+        if (name.equals("alex") && pass.equals("mightyducks")) {
+            System.out.println("You are now logged into the system!");
+        } else if (name.equals("emily") && pass.equals("cat")) {
+            System.out.println("You are now logged into the system!");
         } else {
-            System.out.println("Impossible!");
+            System.out.println("Your username or password was invalid!");
         }
 
     }
