@@ -1,30 +1,18 @@
 import java.util.Scanner;
-import nhlstats.NHLStatistics;
-
-
 
 public class Example {
     public static void main(String[] args) throws Exception {
         Scanner reader = new Scanner(System.in);
+        System.out.print("Type a number: ");
+        int number = Integer.parseInt(reader.nextLine());
 
-        System.out.println("Top ten by goals");
-        System.out.print("\n");
-        NHLStatistics.sortByGoals();
-        NHLStatistics.top(10);
-        System.out.print("\n");
-        System.out.println("Top 25 by penalties");
-        System.out.print("\n");
-        NHLStatistics.sortByPenalties();
-        NHLStatistics.top(25);
-        System.out.print("\n");
-        System.out.print("Sidney Crosby stats: \n");
-        NHLStatistics.searchByPlayer("Sidney Crosby");
-        System.out.print("\n");
-        System.out.println("Team statistics for Philadelphia Flyers: \n");
-        NHLStatistics.teamStatistics("PHI");
-        System.out.print("\n");
-        System.out.println("Team statistics for Anaheim Ducks: \n");
-        NHLStatistics.teamStatistics("ANA");
-        NHLStatistics.sortByPoints();
+        if (number > 0) {
+            System.out.println("The number is positive");
+        }
+
+        if  (number < 0) {
+            System.out.println("The number is not positive.");
+        }
+
     }
 }
