@@ -3,18 +3,10 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        while (true) {
-            int read = Integer.parseInt(reader.nextLine());
-            if (read == 0) {
-                break;
-            }
-
-            sum += read;
-
-
-            System.out.println("Sum now: " + sum);
+        int number = 1;
+        while (number < 101) {
+            System.out.println(number);
+            number++;
         }
-        System.out.println("Sum in the end: " + sum);
     }
 }
