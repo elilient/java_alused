@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        int number = 1;
-        while (number < 101) {
+        int number = 100;
+        while (number > 0) {
             System.out.println(number);
-            number++;
+            number--;
         }
     }
 }
