@@ -6,15 +6,14 @@ public class Example {
         System.out.print("Type a number: ");
         int number = Integer.parseInt(reader.nextLine());
 
-        int i = 1;
-        int result = 1;
-        int counter = 0;
-        while (i <= number) {
+        int i = 0;
+        int result = 0;
 
-            result = result * i;
+        while (i <= number) {
+            result = result+(int)Math.pow(2,i);
             i++;
-            System.out.println("Iteration: " + i + " number: " + number + "result: " + result);
         }
-        System.out.println("Factorial is " + result);
+
+        System.out.println("The result is " + result);
     }
 }
