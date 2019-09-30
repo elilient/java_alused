@@ -4,17 +4,17 @@ public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         int sum = 0;
-        int read;
+        while (true) {
+            int read = Integer.parseInt(reader.nextLine());
+            if (read == 0) {
+                break;
+            }
 
-        System.out.println("Type the first number: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = read;
-        System.out.println("Type the Second number: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = sum + read;
-        System.out.println("Type the Third number: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = sum + read;
-        System.out.println(sum);
+            sum += read;
+
+
+            System.out.println("Sum now: " + sum);
+        }
+        System.out.println("Sum in the end: " + sum);
     }
 }
