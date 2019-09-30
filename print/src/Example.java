@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
 
-        printTriangle(4);
+        //printTriangle(4);
         //printWhitespaces(4);
+        xmasTree(4);
     }
 
     public static void printStars(int number) {
@@ -13,6 +14,9 @@ public class Example {
         while (i < number) {
             System.out.print("*");
             i++;
+            if (i>1) {
+                System.out.print("*");
+            }
         }
         System.out.println("");
     }
@@ -55,5 +59,15 @@ public class Example {
         //System.out.println("");
     }
 
+    public static void xmasTree(int height) {
+        int i = height;
+        int j = 0;
+        while (i >= 0) {
+            printWhitespaces(height-j);
+            printStars(height-i);
+            i--;
+            j++;
+        }
+    }
 
 }
