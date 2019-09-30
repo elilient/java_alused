@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
 
-        printRectangle(17,3);
+        printTriangle(4);
     }
 
     public static void printStars(int number) {
@@ -30,6 +30,14 @@ public class Example {
         while (i < row) {
             printStars(number);
             i++;
+        }
+    }
+
+    public static void printTriangle(int size) {
+        int i = size;
+        while (i >= 0) {
+            printStars(size-i);
+            i--;
         }
     }
 }
