@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
 
-        printStars(5);
-        printStars(3);
-        printStars(9);
+        printSquare(4);
     }
 
     public static void printStars(int number) {
@@ -16,6 +14,15 @@ public class Example {
             i++;
         }
         System.out.println("");
+    }
+
+    public static void printSquare(int number) {
+        int i = 0;
+        while (i < number) {
+            printStars(number);
+            i++;
+        }
+
     }
 
 
