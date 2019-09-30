@@ -2,23 +2,22 @@ import java.util.Scanner;
 
 public class Example {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("How many?");
-        int number = Integer.parseInt(reader.nextLine());
 
+        printStars(5);
+        printStars(3);
+        printStars(9);
+    }
 
-        while (true) {
-            if (number > 0) {
-                printText();
-                number--;
-            } else {
-                break;
-            }
+    public static void printStars(int number) {
+        int i = 0;
+
+        while (i < number) {
+            System.out.print("*");
+            i++;
         }
+        System.out.println("");
     }
 
-    public static void printText() {
-        System.out.println("In the beginning there were the swamp, the hoe and Java.");
-    }
+
 
 }
