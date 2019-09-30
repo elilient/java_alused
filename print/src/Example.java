@@ -4,16 +4,19 @@ public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
         System.out.print("Type a number: ");
-        int number = Integer.parseInt(reader.nextLine());
+        int number;
+        number = Integer.parseInt(reader.nextLine());
 
-        int i = 0;
-        int result = 0;
+        while (true) {
 
-        while (i <= number) {
-            result = result+(int)Math.pow(2,i);
-            i++;
+
+            if (number != -1) {
+                number = Integer.parseInt(reader.nextLine());
+            } else {
+                System.out.println("Thank you and see you later!");
+                break;
+            }
+
         }
-
-        System.out.println("The result is " + result);
     }
 }
