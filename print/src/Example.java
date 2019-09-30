@@ -15,7 +15,6 @@ public class Example {
         System.out.println("Type the Third number: ");
         read = Integer.parseInt(reader.nextLine());
         sum = sum + read;
-
         System.out.println(sum);
     }
 }
