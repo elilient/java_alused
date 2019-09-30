@@ -4,6 +4,7 @@ public class Example {
     public static void main(String[] args) {
 
         printTriangle(4);
+        //printWhitespaces(4);
     }
 
     public static void printStars(int number) {
@@ -35,9 +36,24 @@ public class Example {
 
     public static void printTriangle(int size) {
         int i = size;
+        int j = 0;
         while (i >= 0) {
+            printWhitespaces(size-j);
             printStars(size-i);
             i--;
+            j++;
         }
     }
+
+    public static void printWhitespaces(int size) {
+        int i = 0;
+
+        while (i < size) {
+            System.out.print(" ");
+            i++;
+        }
+        //System.out.println("");
+    }
+
+
 }
