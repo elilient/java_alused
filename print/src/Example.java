@@ -7,11 +7,10 @@ public class Example {
         System.out.print("Type your name: ");
         String name = reader.nextLine();
         int i = 0;
-        int count = 1;
+
         while (i<name.length()) {
-            System.out.println(count+". character: " + name.charAt(i));
             i++;
-            count++;
+            System.out.print(name.charAt(name.length()-i));
         }
 
     }
