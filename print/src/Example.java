@@ -5,7 +5,7 @@ public class Example {
 
         //printTriangle(4);
         //printWhitespaces(4);
-        xmasTree(4);
+        xmasTree(20);
     }
 
     public static void printStars(int number) {
@@ -68,6 +68,10 @@ public class Example {
             i--;
             j++;
         }
+        printWhitespaces(height - 2);
+        printStars(2);
+        printWhitespaces(height -2);
+        printStars(2);
     }
 
 }
