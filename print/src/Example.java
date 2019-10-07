@@ -2,13 +2,17 @@ import java.util.Scanner;
 
 
 public class Example {
-    public static int sum(int number1, int number2, int number3, int number4) {
-        int sum = number1 + number2 + number3 + number4;
-        return sum;
+    public static int least(int number1, int number2) {
+        if (number1 > number2) {
+            return number2;
+        } else {
+            return number1;
+        }
+
     }
     public static void main(String[] args) {
-        int answer = sum(4, 3, 6, 1);
-        System.out.println("sum: " + answer);
+        int answer = least(2, 7);
+        System.out.println("Least: " + answer);
     }
 
 
