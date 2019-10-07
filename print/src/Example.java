@@ -2,76 +2,28 @@ import java.util.Scanner;
 
 public class Example {
     public static void main(String[] args) {
+        int guesses = 0;
 
-        //printTriangle(4);
-        //printWhitespaces(4);
-        xmasTree(20);
-    }
+        Scanner reader = new Scanner(System.in);
+        double randNumber = Math.random()*100;
+        int intNumber = (int)randNumber;
+        System.out.println(intNumber);
 
-    public static void printStars(int number) {
-        int i = 0;
+        System.out.print("Guess a number: ");
+        int number = Integer.parseInt(reader.nextLine());
+        guesses++;
 
-        while (i < number) {
-            System.out.print("*");
-            i++;
-            if (i>1) {
-                System.out.print("*");
+        while (true) {
+            if (number != intNumber) {
+                System.out.println("The number is greater, guesses made: " + guesses);
+                System.out.print("Guess a number: ");
+                number = Integer.parseInt(reader.nextLine());
+                guesses++;
+            } else {
+                System.out.println("Congratulations, your guess is correct!");
+                break;
             }
         }
-        System.out.println("");
-    }
-
-    public static void printSquare(int number) {
-        int i = 0;
-        while (i < number) {
-            printStars(number);
-            i++;
-        }
-
-    }
-
-    public static void printRectangle(int number, int row) {
-        int i = 0;
-        while (i < row) {
-            printStars(number);
-            i++;
-        }
-    }
-
-    public static void printTriangle(int size) {
-        int i = size;
-        int j = 0;
-        while (i >= 0) {
-            printWhitespaces(size-j);
-            printStars(size-i);
-            i--;
-            j++;
-        }
-    }
-
-    public static void printWhitespaces(int size) {
-        int i = 0;
-
-        while (i < size) {
-            System.out.print(" ");
-            i++;
-        }
-        //System.out.println("");
-    }
-
-    public static void xmasTree(int height) {
-        int i = height;
-        int j = 0;
-        while (i >= 0) {
-            printWhitespaces(height-j);
-            printStars(height-i);
-            i--;
-            j++;
-        }
-        printWhitespaces(height - 2);
-        printStars(2);
-        printWhitespaces(height -2);
-        printStars(2);
     }
 
 }
