@@ -2,15 +2,19 @@ import java.util.Scanner;
 
 
 public class Example {
-    public static int greatest(int number1, int number2, int number3) {
-       int first = Math.max(number1, number2);
-       int second = Math.max(first, number3);
+    public static double average(int number1, int number2, int number3, int number4) {
+        int sum = sum(number1,number2,number3,number4);
+        double average = (double)sum/4;
+        return average;
+    }
 
-       return second;
+    public static int sum(int number1, int number2, int number3, int number4) {
+        int sum = number1 + number2 + number3 + number4;
+        return sum;
     }
 
     public static void main(String[] args) {
-        int answer =  greatest(7, 2, 3);
-        System.out.println("Greatest: " + answer);
+        double answer = average(4, 3, 6, 1);
+        System.out.println("average: " + answer);
     }
 }
