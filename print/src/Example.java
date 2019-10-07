@@ -6,11 +6,10 @@ public class Example {
         Scanner reader = new Scanner(System.in);
         System.out.print("Type a word: ");
         String word = reader.nextLine();
-        System.out.print("Length of the first part: ");
+        System.out.print("Length of the end part: ");
         int number = Integer.parseInt(reader.nextLine());
 
-        int i = 0;
-        System.out.print(word.substring(0,number));
+        System.out.print("Result: " + word.substring(word.length()-number, word.length()));
 
 
 
