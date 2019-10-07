@@ -7,7 +7,11 @@ public class Example {
         System.out.print("Type your name: ");
         String name = reader.nextLine();
 
-        char character = name.charAt(name.length()-1);
-        System.out.print("First character: " + character);
+        char character1 = name.charAt(0);
+        char character2 = name.charAt(1);
+        char character3 = name.charAt(2);
+        System.out.println("1. character: " + character1);
+        System.out.println("2. character: " + character2);
+        System.out.println("3. character: " + character3);
     }
 }
