@@ -16,6 +16,7 @@ public class Example {
                 System.out.print(help);
                 i++;
                 break;
+                
             } else {
                 words.add(word);
                 help = help + "\n" + word;
