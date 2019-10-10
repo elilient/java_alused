@@ -12,12 +12,13 @@ public class Example {
             System.out.print("Type a word: ");
             String word = reader.nextLine();
             if (word.isEmpty()) {
-                System.out.println(words.get(i));
+                System.out.println("You typed the following words:");
+                System.out.print(help);
                 i++;
                 break;
             } else {
                 words.add(word);
-                help = help + word;
+                help = help + "\n" + word;
             }
 
         }
