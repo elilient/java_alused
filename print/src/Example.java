@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -5,32 +7,35 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.add(2);
 
-        System.out.print("Type a number: ");
-        int number = Integer.parseInt(reader.nextLine());
-        if (moreThanOnce(list, number)) {
-            System.out.println(number + " appears more than once.");
+        System.out.print("Type a text:");
+        String text = reader.nextLine();
+        if (palindrome(text)) {
+            System.out.println("The text is a palindrome!");
         } else {
-            System.out.println(number + "does not appear more than once.");
+            System.out.println("The text is not a palindrome!");
         }
     }
-    public static boolean moreThanOnce(ArrayList<Integer> list, int number) {
-        int count = 0;
-        for (int i : list) {
-            if (i == number) {
-                count++;
-            }
 
+    public static String reverse(String text) {
+        String help = "";
+        int i = 1;
+        char character;
+        while (i<text.length()+1) {
+            int length = text.length()-i;
+            i++;
+            character = text.charAt(length);
+            help = help + character;
         }
-        if (count>1) {
+        return help;
+    }
+
+    public static boolean palindrome(String text) {
+        if (reverse(text).equals(text)) {
             return true;
         } else {
             return false;
         }
     }
+
 }
