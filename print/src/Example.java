@@ -4,22 +4,20 @@ import java.util.ArrayList;
 
 public class Example {
     public static void main(String[] args) {
-        ArrayList<String> words = new ArrayList<>();
-        Scanner reader = new Scanner(System.in);
-        String help = "";
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Hallo");
+        list.add("Ciao");
+        list.add("Hello");
+        System.out.println("There are this many items in the list:");
+        System.out.println(countItems(list));
 
-        while (true) {
-            System.out.print("Type a word: ");
-            String word = reader.nextLine();
-            if (word.isEmpty()) {
-                System.out.println("You typed the following words: ");
-                break;
-            }
-            words.add(word);
+    }
+
+    public static int countItems(ArrayList<String> list) {
+        int i = 0;
+        while (i < list.size()) {
+            i++;
         }
-        Collections.sort(words);
-        for (String word : words) {
-            System.out.println(word);
-        }
+        return i;
     }
 }
