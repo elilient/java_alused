@@ -2,34 +2,21 @@ import java.util.ArrayList;
 
 public class Example {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.add(2);
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Hallo");
+        list.add("Moi");
+        list.add("Benvenuto!");
+        list.add("badger badger badger badger");
+        ArrayList<Integer> lengths = lengths(list);
 
-        System.out.println("The average is: " + average(list));
+        System.out.println("The average is: " + lengths);
     }
 
-    public static int sum(ArrayList<Integer> list) {
-        int sum = 0;
-
-        for (int number : list) {
-            sum += number;
+    public static ArrayList<Integer> lengths(ArrayList<String> list) {
+        ArrayList<Integer> lengthList = new ArrayList<Integer>();
+        for (String word : list) {
+            lengthList.add(word.length());
         }
-        return sum;
+        return lengthList;
     }
-
-    public static double average(ArrayList<Integer> list) {
-        double average = 0;
-        int i = 0;
-        for (int number : list) {
-            i++;
-        }
-        average = (double)sum(list) / i;
-        return average;
-    }
-
-
-
 }
