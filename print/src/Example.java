@@ -1,32 +1,28 @@
-import java.util.Collections;
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Example {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Pascal");
-        list.add("Java");
-        list.add("Python");
-        list.add("Ruby");
-        list.add("C++");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
 
-        print(list);
+        System.out.println("The sum: " + sum(list));
 
-        removeLast(list);
+        list.add(10);
 
-        System.out.println();
-
-        print(list);
-
+        System.out.println("The sum: " + sum(list));
     }
 
-    public static void print(ArrayList<String> printed) {
-        for (String word : printed) {
-            System.out.println(word);
+    public static int sum(ArrayList<Integer> list) {
+        int sum = 0;
+
+        for (int number : list) {
+            sum += number;
         }
+        return sum;
     }
-    public static void removeLast(ArrayList<String> list) {
-        list.remove(list.size()-1);
-    }
+
+
 }
