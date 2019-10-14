@@ -8,11 +8,7 @@ public class Example {
         list.add(7);
         list.add(2);
 
-        System.out.println("The sum: " + sum(list));
-
-        list.add(10);
-
-        System.out.println("The sum: " + sum(list));
+        System.out.println("The average is: " + average(list));
     }
 
     public static int sum(ArrayList<Integer> list) {
@@ -23,6 +19,17 @@ public class Example {
         }
         return sum;
     }
+
+    public static double average(ArrayList<Integer> list) {
+        double average = 0;
+        int i = 0;
+        for (int number : list) {
+            i++;
+        }
+        average = (double)sum(list) / i;
+        return average;
+    }
+
 
 
 }
