@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -10,11 +11,15 @@ public class Example {
         while (true) {
             System.out.print("Type a word: ");
             String word = reader.nextLine();
-            if (words.contains(word)) {
-                System.out.println("You gave the word " + word + " twice");
+            if (word.isEmpty()) {
+                System.out.println("You typed the following words: ");
                 break;
             }
             words.add(word);
+        }
+        Collections.reverse(words);
+        for (String word : words) {
+            System.out.println(word);
         }
     }
 }
