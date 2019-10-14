@@ -5,19 +5,28 @@ import java.util.ArrayList;
 public class Example {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
-        list.add("Hallo");
-        list.add("Ciao");
-        list.add("Hello");
-        System.out.println("There are this many items in the list:");
-        System.out.println(countItems(list));
+        list.add("Pascal");
+        list.add("Java");
+        list.add("Python");
+        list.add("Ruby");
+        list.add("C++");
+
+        print(list);
+
+        removeLast(list);
+
+        System.out.println();
+
+        print(list);
 
     }
 
-    public static int countItems(ArrayList<String> list) {
-        int i = 0;
-        while (i < list.size()) {
-            i++;
+    public static void print(ArrayList<String> printed) {
+        for (String word : printed) {
+            System.out.println(word);
         }
-        return i;
+    }
+    public static void removeLast(ArrayList<String> list) {
+        list.remove(list.size()-1);
     }
 }
