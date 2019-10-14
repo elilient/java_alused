@@ -17,7 +17,7 @@ public class Example {
             }
             words.add(word);
         }
-        Collections.reverse(words);
+        Collections.sort(words);
         for (String word : words) {
             System.out.println(word);
         }
