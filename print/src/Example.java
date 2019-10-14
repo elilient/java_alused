@@ -1,22 +1,22 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Example {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Hallo");
-        list.add("Moi");
-        list.add("Benvenuto!");
-        list.add("badger badger badger badger");
-        ArrayList<Integer> lengths = lengths(list);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
 
-        System.out.println("The average is: " + lengths);
+        System.out.println("The greatest number is: " + greatest(list));
     }
 
-    public static ArrayList<Integer> lengths(ArrayList<String> list) {
-        ArrayList<Integer> lengthList = new ArrayList<Integer>();
-        for (String word : list) {
-            lengthList.add(word.length());
+    public static int greatest(ArrayList<Integer> list) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int number : list) {
+            numbers.add(number);
         }
-        return lengthList;
+        return Collections.max(numbers);
     }
 }
