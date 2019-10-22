@@ -1,23 +1,37 @@
+import java.util.Scanner;
+
 public class Example {
     public static void main(String[] args) {
-        LyyraCard cardPekka = new LyyraCard(20);
-        LyyraCard cardBrian = new LyyraCard(30);
+        Scanner reader = new Scanner(System.in);
+        BoundedCounter seconds = new BoundedCounter(59);
+        BoundedCounter minutes = new BoundedCounter(59);
+        BoundedCounter hours = new BoundedCounter(23);
 
-        cardPekka.payGourmet();
-        cardBrian.payEconomical();
-        System.out.println("Pekka: " + cardPekka);
-        System.out.println("Brian: " + cardBrian);
+        System.out.println("seconds: ");
+        int s = Integer.parseInt(reader.nextLine());
+        System.out.println("minutes: ");
+        int m = Integer.parseInt(reader.nextLine());
+        System.out.println("hours: ");
+        int h = Integer.parseInt(reader.nextLine());
 
-        cardPekka.loadMoney(20);
-        cardBrian.payGourmet();
-        System.out.println("Pekka: " + cardPekka);
-        System.out.println("Brian: " + cardBrian);
+        seconds.setValue(s);
+        minutes.setValue(m);
+        hours.setValue(h);
 
-        cardPekka.payEconomical();
-        cardPekka.payEconomical();
-        cardBrian.loadMoney(50);
-        System.out.println("Pekka: " + cardPekka);
-        System.out.println("Brian: " + cardBrian);
+
+        int i = 0;
+        while (i < 121) {
+            System.out.println(hours + ":" + minutes + ":" + seconds);
+            seconds.next();
+            if (seconds.getValue() == 0) {
+                minutes.next();
+                if (minutes.getValue() == 0) {
+                    hours.next();
+                }
+            }
+
+            i++;
+        }
     }
 
 }
