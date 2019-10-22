@@ -1,15 +1,23 @@
 public class Example {
     public static void main(String[] args) {
-        Menu food = new Menu();
+        LyyraCard cardPekka = new LyyraCard(20);
+        LyyraCard cardBrian = new LyyraCard(30);
 
-        food.addMeal("Hamburger");
-        food.addMeal("Fish'n'Chips");
-        food.addMeal("Sauerkraut");
+        cardPekka.payGourmet();
+        cardBrian.payEconomical();
+        System.out.println("Pekka: " + cardPekka);
+        System.out.println("Brian: " + cardBrian);
 
-        food.printMeals();
+        cardPekka.loadMoney(20);
+        cardBrian.payGourmet();
+        System.out.println("Pekka: " + cardPekka);
+        System.out.println("Brian: " + cardBrian);
 
-        food.clearMenu();
-        food.printMeals();
+        cardPekka.payEconomical();
+        cardPekka.payEconomical();
+        cardBrian.loadMoney(50);
+        System.out.println("Pekka: " + cardPekka);
+        System.out.println("Brian: " + cardBrian);
     }
 
 }
