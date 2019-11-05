@@ -1,11 +1,9 @@
 public class Program {
     public static void main(String[] args) {
-        Dice dice = new Dice(6);
-
-        int i = 0;
-        while ( i < 10 ) {
-            System.out.println(dice.roll());
-            i++;
-        }
+        PasswordRandomizer randomizer = new PasswordRandomizer(13);
+        System.out.println("Password: " + randomizer.createPassword());
+        System.out.println("Password: " + randomizer.createPassword());
+        System.out.println("Password: " + randomizer.createPassword());
+        System.out.println("Password: " + randomizer.createPassword());
     }
 }
