@@ -3,35 +3,19 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        BoundedCounter seconds = new BoundedCounter(59);
-        BoundedCounter minutes = new BoundedCounter(59);
-        BoundedCounter hours = new BoundedCounter(23);
-
-        System.out.println("seconds: ");
-        int s = Integer.parseInt(reader.nextLine());
-        System.out.println("minutes: ");
-        int m = Integer.parseInt(reader.nextLine());
-        System.out.println("hours: ");
-        int h = Integer.parseInt(reader.nextLine());
-
-        seconds.setValue(s);
-        minutes.setValue(m);
-        hours.setValue(h);
-
-
+        NumberStatistics stats = new NumberStatistics();
         int i = 0;
-        while (i < 121) {
-            System.out.println(hours + ":" + minutes + ":" + seconds);
-            seconds.next();
-            if (seconds.getValue() == 0) {
-                minutes.next();
-                if (minutes.getValue() == 0) {
-                    hours.next();
-                }
-            }
-
-            i++;
+        while (i>=0) {
+            System.out.println("Type a number:");
+            int s = Integer.parseInt(reader.nextLine());
+            stats.addNumber(s);
+            i=s;
         }
+
+
+        System.out.println("Sum: " + stats.sum());
+        System.out.println("Sum of even: " + stats.evenSum());
+        System.out.println("Sum of odd: " + stats.oddSum());
     }
 
 }
