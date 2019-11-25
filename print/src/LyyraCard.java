@@ -1,35 +1,25 @@
 public class LyyraCard {
     private double balance;
 
-    public LyyraCard(double balanceAtStart) {
-        this.balance = balanceAtStart;
+    public LyyraCard(double balance) {
+        this.balance = balance;
     }
 
-    public String toString() {
-        String text = "The card has " + balance + " euros";
-        return text;
-    }
-
-    public void payEconomical() {
-        if (balance >= 2.5) {
-            balance = balance - 2.5;
-        }
-    }
-
-    public void payGourmet() {
-        if (balance >= 4.00) {
-            balance = balance - 4.00;
-        }
-
+    public double balance() {
+        return this.balance;
     }
 
     public void loadMoney(double amount) {
-        if (balance < 150 && amount > 0) {
-            balance = balance + amount;
-            if (balance > 150) {
-                balance = 150;
-            }
-        }
+        this.balance += amount;
+    }
 
+    public boolean pay(double amount) {
+
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            return true;
+        } else {
+            return false;
+        }
     }
 }
